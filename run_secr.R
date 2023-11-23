@@ -54,7 +54,7 @@ run_secr <- function(simulated_points,
   
   
   # fit model specified by secr.fitformula
-  cfit <- secr.fit(capture_history, 
+  cfit <- secr.fit(capthist = capthist, 
                    model = list(as.formula(secr.fitformula)),  
                    mask = mask, detectfn = "HHN", 
                    # starting value for D = n_pts * 4 as 50x50 is 0.25ha

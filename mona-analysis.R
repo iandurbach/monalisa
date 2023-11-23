@@ -173,12 +173,12 @@ capthists_few_alloccs_7x7 <- tibble(expand.grid(i=1,
 capthists_few_alloccs_7x7 <- left_join(capthists_few_alloccs_7x7, cht2, by = c("i", "noccasions"))
 rm(cht2)
 
-## save
-save(big_mona_df, small_mona_df, blurry_mona_df, small_blurry_mona_df,
-     simulated_points, 
-     big_mona_mask, mona_mask,
-     capthists_few_alloccs_7x7, capthists_few_alloccs_3x3, 
-     file = "output/mona-inputs.RData")
+# ## save
+# save(big_mona_df, small_mona_df, blurry_mona_df, small_blurry_mona_df,
+#      simulated_points, 
+#      big_mona_mask, mona_mask,
+#      capthists_few_alloccs_7x7, capthists_few_alloccs_3x3, 
+#      file = "output/mona-inputs.RData")
 
 # 5) fit models
 
@@ -232,5 +232,5 @@ for(i in 1:nrow(parlist3)){
                                capthist = parlist3$capthist[[i]])
 }
 
-## save
-save(res_acd, file = "output/mona-results.RData")
+# ## save
+# save(res_acd, file = "output/mona-results.RData")
